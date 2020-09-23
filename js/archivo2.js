@@ -211,9 +211,9 @@ let $claseSaludabe = document.querySelector('#claseSaludable')
 // RENDERIZDOR DE CARRITO
 //---------------------------------------
 let carrito = []
+let $contenedro = document.querySelector('.sectionM__sidebar__div')
 
 function renderBaseDeDatos(){
-    let $contenedro = document.querySelector('.sectionM__sidebar__div')
     baseDatos.forEach(function(producto){
         
         //-----------------------------
