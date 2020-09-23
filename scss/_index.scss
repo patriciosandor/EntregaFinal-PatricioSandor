@@ -79,7 +79,6 @@
 
     .sectionM__article__div__div__div__div-texto-m__div{
       width: 100%;
-      /* background-color: red; */
       & a{
         font-size: 1.5rem;
         border-radius: 1rem;
@@ -93,4 +92,55 @@
       }
     }
 
+}
+
+.sectionM{
+  position: relative;
+  &__sidebar{
+    background-color: rgba(42, 42, 42, 0.671);
+    position: absolute;
+    // position: fixed;
+    z-index: 2;
+    width: 60rem;
+    height: 100vh ;
+    right: -60rem;
+    top: 10.5rem;
+    transition: all 0.8s;
+
+    &__h2{
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      color: white;
+      font-family:'Roboto', sans-serif;
+      font-weight: 200;
+      font-size: 4.5rem;
+      border-bottom: 0.3rem solid;
+    }
+
+    &__h4{
+      color: white;
+      display: block;
+      text-align: center;
+      font-family:'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 2rem;
+      margin: 2rem 0 1rem 0;
+      padding: 1rem 0;
+    }
+
+    &__div{
+      &__div{
+        & img{
+          width:15rem;
+        }
+      }
+    }
+  }
+}
+
+.close{
+  transform: translateX(-60rem);
+  opacity: 1 !important;
 }

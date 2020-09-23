@@ -1,66 +1,214 @@
 
-const nuevoUsuario = {
-    listadoDeNombre : [],
-    listaDeMails : [],
-    listaDeContraseñas : []
+// // -----------------------------------------------------------------
+// // -----------------------------------------------------------------
+// //                            OBJETO
+// // -----------------------------------------------------------------
+// // -----------------------------------------------------------------
+
+// //                            EJEMPLO 1
+// // -----------------------------------------------------------------
+
+const nuevoUsuario = []
+function crearUsuario(nombre, mail, contraseña) {
+    this.nombre = nombre
+    this.mail = mail
+    this.contraseña = contraseña
 }
+var nombreApellido
+var nuevoMail
+var nuevoContraseña
+var usuario
 
-// var listadoDeNombre = []
-// var listaDeMails= []
-// var listaDeContraseñas = []
-// -----------------------------------------------------------------
-                            //BOTON QUIERO
-// -----------------------------------------------------------------
-function botonCompras(){
-    usuario = prompt ('Ingresar con tu Mail')
-    for(i=0; i < nuevoUsuario.listaDeMails.length; i++){
-        if (usuario == nuevoUsuario.listaDeMails[i])
-        var nombre = i
-    }
+// function buscarCuenta(){
+//     var lookUsuario = prompt('Si no sos Usuario escriba "Nuevo" y si ya tienes usuario escriba "Usuario".')
+//     if (lookUsuario === "Nuevo") {
+//             nombreApellido = prompt('Ingrese su Nombre y Apellido.')
+//             nuevoMail = prompt('Le solicitamos que ingrese el Nuevo Mail.')
+//             nuevaContraseña = prompt('Ingrese una nueva contraseña.')
+//             alert('Bienvenido ' + nombreApellido + ' ' + 'Le estaremos mandando una mail confirmando su cuenta nueva.')
+//         }
 
-    if(nuevoUsuario.listaDeMails.includes(usuario) == true){
-        password = prompt ('Usted ya es un USUARIO Registrado introduzca su Contraseña.')
-            // alert ('Bienvenido ' + listadoDeNombre[nombre] + ' ya esta todo listo para realizar su compra.' )
+//     else if (lookUsuario === 'Usuario'){
+//         return botonCompras ()
+//     }
+//     else {
+//         alert ('Verificar Mayuscula o Ortografia')
+//     }
+//         var usuario = new crearUsuario(nombreApellido, nuevoMail, nuevaContraseña)
+//         nuevoUsuario.push(usuario)
+// }
+
+// function botonCompras(){
+//     mailUsuario = prompt ('Ingresar con tu Mail')
+//     if(mailUsuario === nuevoUsuario.mail){
+//         password = prompt ('Usted ya es un USUARIO Registrado introduzca su Contraseña.')
+//     }
+//     else{
+//         alert ('PARA ESTO, USTED SE TIENE QUE REGISTRAR, DIRIJASE AL CARRITO PARA COMPLETAR LOS DATOS.') 
+//     }
+// }
+
+// function botonCompras(){
+
+//    //*SIGN IN LOG IN CON PROMPT
+
+//     mailUsuario = prompt ('Ingresar con tu Mail')
+    
+//     var resultado = nuevoUsuario.find(producto => producto.mail == mailUsuario)
+
+//     if(resultado){
+//         password = prompt ('Usted ya es un USUARIO Registrado introduzca su Contraseña.')
         
-        if((nuevoUsuario.listaDeMails.includes(usuario)) && (nuevoUsuario.listaDeContraseñas.includes(password))){
-            alert ('Bienvenido ' + nuevoUsuario.listadoDeNombre[nombre] + ' ya esta todo listo para realizar su compra.' )
-        }
+//         var resultado2 = nuevoUsuario.find(producto2 => producto2.contraseña == password)
+
+//         // for(i=0; i < nuevoUsuario.length; i++){
+                
+//         //     if(resultado2){
+//         //         alert (`Hola ${nuevoUsuario[i].nombre} binvendio ygracias por confiar en nostros`)
+//         //         //VER COMO CAMBIAR ESTO Y LLAMAR BIEN EL OBJETO
+//         //     }
+//         //     else{
+//         //         alert('Tu contraseña es ERRONEA')         
+//         //     }
+//         // }
+
+//                     if(resultado2){
+//                 alert (`Hola ${nombreApellido} binvendio ygracias por confiar en nostros`)
+//                 //VER COMO CAMBIAR ESTO Y LLAMAR BIEN EL OBJETO
+//             }
+//             else{
+//                 alert('Tu contraseña es ERRONEA')         
+//             }
+
+//     }
+//     else{
+//         alert ('PARA ESTO, USTED SE TIENE QUE REGISTRAR, DIRIJASE AL CARRITO PARA COMPLETAR LOS DATOS.') 
+//     }
+
+// }
+
+// //                            EJEMPLO 2
+// // -----------------------------------------------------------------
+
+// function buscarCuenta(){
+//     var usuNuevo = prompt ('Si no sos Usuario escriba "Nuevo" y si ya tienes usuario escriba "Usuario".')
+//         if (usuNuevo === "Nuevo"){
+//             nombreApellido = prompt ('Ingrese su Nombre y Apellido.')
+//             nuevoMail = prompt ('Le solicitamos que ingrese el Nuevo Mail.')
+//             nuevaContraseña = prompt ('Ingrese una nueva contraseña.')
+//             alert ('Bienvenido ' + nombreApellido + ' ' + 'Le estaremos mandando una mail confirmando su cuenta nueva.')
+
+//             function crearUsuario(nombre, mail, contraseña){
+//                 this.nombre = nombre
+//                 this.mail= mail
+//                 this.contraseña = contraseña
+//             } 
+
+//             var usuario = new crearUsuario (nombreApellido , nuevoMail, nuevaContraseña )
+//             nuevoUsuario.push(usuario)
+
+//         }
+
+//         else if (usuNuevo === 'Usuario'){
+//             return botonCompras ()
+//         }
+//         else {
+//             alert ('Verificar Mayuscula o Ortografia')
+//         }
+// } 
+
+// function botonCompras(){
+//     usuario = prompt ('Ingresar con tu Mail')
+//     for(i=0; i < nuevoUsuario.length; i++){
+//         if (usuario == nuevoUsuario[i])
+//         var nombre = i
+//     }
+
+//     if(nuevoUsuario.includes(usuario) == true){
+//         password = prompt ('Usted ya es un USUARIO Registrado introduzca su Contraseña.')
+//             // alert ('Bienvenido ' + listadoDeNombre[nombre] + ' ya esta todo listo para realizar su compra.' )
         
-        else{
-            alert('Tu contraseña es ERRONEA')
-        }
+//         if((nuevoUsuario.includes(usuario)) && (nuevoUsuario.includes(password))){
+//             alert ('Bienvenido ' + nuevoUsuario[nombre] + ' ya esta todo listo para realizar su compra.' )
+//         }
+        
+//         else{
+//             alert('Tu contraseña es ERRONEA')
+//         }
 
-    } else{
-        alert ('PARA ESTO, USTED SE TIENE QUE REGISTRAR, DIRIJASE AL CARRITO PARA COMPLETAR LOS DATOS.') 
-    }
-}
-function buscarCuenta(){
-    var lookUsuario = prompt ('Si no sos Usuario escriba "Nuevo" y si ya tienes usuario escriba "Usuario".')
-    function signIn(usuNuevo){
-        if (usuNuevo === "Nuevo"){
-            nombreApellido = prompt ('Ingrese su Nombre y Apellido.')
-            nuevoMail = prompt ('Le solicitamos que ingrese el Nuevo Mail.')
-            nuevaContraseña = prompt ('Ingrese una nueva contraseña.')
-            nuevoUsuario.listaDeMails.push(nuevoMail)
-            nuevoUsuario.listaDeContraseñas.push(nuevaContraseña)
-            nuevoUsuario.listadoDeNombre.push(nombreApellido)
-            alert ('Bienvenido ' + nombreApellido + ' ' + 'Le estaremos mandando una mail confirmando su cuenta nueva.')
-        }
-        else if (usuNuevo === 'Usuario'){
-            return botonCompras ()
-        }
-        else {
-            alert ('Verificar Mayuscula o Ortografia')
-        }
-    }
-    signIn(lookUsuario)
+//     } else{
+//         alert ('PARA ESTO, USTED SE TIENE QUE REGISTRAR, DIRIJASE AL CARRITO PARA COMPLETAR LOS DATOS.') 
+//     }
+// }
+    
+    
 
-}
+// // -----------------------------------------------------------------
+// // -----------------------------------------------------------------
+// //                            EJEMPLO PRIMERA ENR
+// // -----------------------------------------------------------------
+// // -----------------------------------------------------------------
 
 
-// -----------------------------------------------------------------
-                            //OBJETO PLATOS
-// -----------------------------------------------------------------
+// const nuevoUsuario = {
+//     listadoDeNombre : [],
+//     listaDeMails : [],
+//     listaDeContraseñas : []
+// }
+
+// // -----------------------------------------------------------------
+// //                             BOTON QUIERO
+// // -----------------------------------------------------------------
+// function botonCompras(){
+//     usuario = prompt ('Ingresar con tu Mail')
+//     for(i=0; i < nuevoUsuario.listaDeMails.length; i++){
+//         if (usuario == nuevoUsuario.listaDeMails[i])
+//         var nombre = i
+//     }
+
+//     if(nuevoUsuario.listaDeMails.includes(usuario) == true){
+//         password = prompt ('Usted ya es un USUARIO Registrado introduzca su Contraseña.')
+//             // alert ('Bienvenido ' + listadoDeNombre[nombre] + ' ya esta todo listo para realizar su compra.' )
+        
+//         if((nuevoUsuario.listaDeMails.includes(usuario)) && (nuevoUsuario.listaDeContraseñas.includes(password))){
+//             alert ('Bienvenido ' + nuevoUsuario.listadoDeNombre[nombre] + ' ya esta todo listo para realizar su compra.' )
+//         }
+        
+//         else{
+//             alert('Tu contraseña es ERRONEA')
+//         }
+
+//     } else{
+//         alert ('PARA ESTO, USTED SE TIENE QUE REGISTRAR, DIRIJASE AL CARRITO PARA COMPLETAR LOS DATOS.') 
+//     }
+// }
+// function buscarCuenta(){
+//     var lookUsuario = prompt ('Si no sos Usuario escriba "Nuevo" y si ya tienes usuario escriba "Usuario".')
+//     function signIn(usuNuevo){
+//         if (usuNuevo === "Nuevo"){
+//             nombreApellido = prompt ('Ingrese su Nombre y Apellido.')
+//             nuevoMail = prompt ('Le solicitamos que ingrese el Nuevo Mail.')
+//             nuevaContraseña = prompt ('Ingrese una nueva contraseña.')
+//             nuevoUsuario.listaDeMails.push(nuevoMail)
+//             nuevoUsuario.listaDeContraseñas.push(nuevaContraseña)
+//             nuevoUsuario.listadoDeNombre.push(nombreApellido)
+//             alert ('Bienvenido ' + nombreApellido + ' ' + 'Le estaremos mandando una mail confirmando su cuenta nueva.')
+//         }
+//         else if (usuNuevo === 'Usuario'){
+//             return botonCompras ()
+//         }
+//         else {
+//             alert ('Verificar Mayuscula o Ortografia')
+//         }
+//     }
+//     signIn(lookUsuario)
+
+// }
+
+
+// // -----------------------------------------------------------------
+// //                             OBJETO PLATOS
+// // -----------------------------------------------------------------
 
 var carrito = []
 
@@ -184,20 +332,4 @@ Menu6_2.buscadorDePlato()
 Menu6_3.buscadorDePlato()
 Menu6_4.buscadorDePlato()
 
-// function buscadorDePlato (plato, precio, sector, codigo, cantidad){
-//     var resultado = carrito.find(producto => produto.nombre == nombre)
-//     if (reultado){
-//         resultado.cant++
-//     }
-//     else{
-//         const productoCarrito = {
-//             plato : plato,
-//             precio : precio,
-//             sector : sector,
-//             codigo : codigo,
-//             cantidad : 1
 
-//         }
-        //carrito.push(productoCarrito)
-//     }
-// }

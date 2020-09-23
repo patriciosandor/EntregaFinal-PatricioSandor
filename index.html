@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-        <script defer src="js/archivo.js"></script>
+        <script defer src="js/archivo2.js"></script>
 </head>
 <body>       
     <!-- Secto NAV -->
@@ -64,349 +64,118 @@
                     </ul>
                 </div>
                 <div class="header__nav__redes">
-                        <i class="fas fa-user fa-3x" onclick="buscarCuenta()"></i>
-                        <a href=""> 
-                            <img class="header__nav__redes__img" src="fotos/shopping.png" alt="Logo Shopping">
-                        </a>
-                        <a href="http://wa.me/5491158301557">
-                            <img class="header__nav__redes__img" src="fotos/whatsapp1.png" alt="Logo WhatsApss">
-                        </a>
-                        <a href="https://www.facebook.com/briefcatering/">
-                            <img class="header__nav__redes__img" src="fotos/facebook2.png" alt="Logo Facebook">
-                        </a>
-                        <a href="https://www.instagram.com/briefcatering/">
-                            <img class="header__nav__redes__img" src="fotos/instagram2.png" alt="Logo Facebook">
-                        </a>
+            <!-- ICONO USUARIO -->
+                    <i class="fas fa-user fa-3x"onclick="buscarCuenta()" data-toggle="modal" data-target="#staticBackdrop" href="#"></i>
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Realizar LOG IN</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <large id="emailHelp" class="form-text text-muted">Nunca compartas tus datos con NADIE</large>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">SING IN</button>
+                                    <large id="emailHelp" class="form-text text-muted">En caso de que no seas usuario haga CLICK en SING IN</large>
+                                </form>
+                            </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                                    <button type="button" class="btn btn-primary">CLICK</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <i id="carritoMercado" class="fas fa-shopping-cart fa-3x header__nav__redes__img"></i>
+
+                    <a href="http://wa.me/5491158301557">
+                        <img class="header__nav__redes__img" src="fotos/whatsapp1.png" alt="Logo WhatsApss">
+                    </a>
+                    <a href="https://www.facebook.com/briefcatering/">
+                        <img class="header__nav__redes__img" src="fotos/facebook2.png" alt="Logo Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/briefcatering/">
+                        <img class="header__nav__redes__img" src="fotos/instagram2.png" alt="Logo Facebook">
+                    </a>
                 </div>
         </nav>
-    </header>   
-    <!-- SECTOR MENU -->
-    <!-- SECTOR PIZZAS Y PASTAS  -->
-    <section class="sectionM">
-        <article  id="menuUno" class="sectionM__article2">
-            <div class="sectionM__article2__title">
-                <h2 class="sectionM__article2__title__h2"> MENU PIZZAS Y PASTAS</h2>
+    </header>
+    <section class="sectionM container-fluid">
+        <div class="sectionM__sidebar " onscroll="">
+            <h2 class="sectionM__sidebar__h2">CARRITO DE COMPRAS</h2>
+            <h4 class="sectionM__sidebar__h4">SELEECION DE COMIDA</h4>
+            <div class="sectionM__sidebar__div row modal-dialog modal-dialog-scrollable">
+                <!-- <div class="sectionM__sidebar__div__div col-6">
+                    <div class="sectionM__sidebar__div__div__div d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                        <img src="fotos/tacc.jpg class="sectionM__sidebar__div__div__div__img">
+                        <h4 class="sectionM__sidebar__div__div__div__h6 shoppingCartItemTitle text-truncate ml-3 mb-0">pdrito</h4>
+                    </div>
+                </div>
+                <div class="sectionM__sidebar__div__div2 col-6">
+                    <div class="sectionM__sidebar__div__div2__div d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                        <p class="sectionM__sidebar__div__div2__div__p mb-0 "></p>
+                    </div>
+                </div> -->
             </div>
-            <div class="sectionM__article__div">
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu1plato1.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">PIZZA DE MUZZARELLA INDIVIDUALES X3</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$380-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div" onclick= "botonCompras()">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu1plato2.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">TARTAS INDIVIDUALES</h2>
-                            <p class="card-text h3 text-center">Pollo / QyC / JyQ</p>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$210-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu1plato3.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">ÑOQUIS DE PAPA A LA BOLOGNESA</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p ">-$260-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="platoSorrent" class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu1plato4.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m ">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">SORRENTINOS DE CALABAZA C/ SALSA ROSA</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$260-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m ">
-                            <img src="fotos/menu1plato5.jpg"alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">SORRENTINOSDE RICOTA JYQ C/ FILETO</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$260-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    <!-- SECTOR PIZZAS Y PASTAS  -->
+        <article  id="menuUno" class="sectionM__article2 container pl-5 pr-5">
+            <div class="sectionM__article2__title mb-5 text-center">
+                <h2 class="sectionM__article2__title__h2 col-12 display-2"> MENU PIZZAS Y PASTAS</h2>
+            </div>
+            <div id="clasePizzaPastas" class="sectionM__article__div row">
+                <!-- AGREGAR JS -->
+            </div>
         </article>
-        <!-- SECTOR MENU CARNE -->
+    <!-- SECTOR MENU CARNE -->
         <article  id="menuDos" class="sectionM__article">
             <div class="sectionM__article__title">
                 <h2 class="sectionM__article__title__h2"> MENU CARNE</h2>
             </div>
-            <div class="sectionM__article__div">
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu2plato1.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">MILANESA DE LOMO NAPOLITANA C/ PAPINES</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$300-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu2plato2.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">KID MILNESA C/PURÉ</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$250-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="platoLomoStro" class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu2plato3.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">LOMO STROGONOFF C/ ARROZ</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$370-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                                <img src="fotos/tacc.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu2plato4.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m ">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">LOMO AL CHAMPIGNON C/ ARROZ AMARILLO</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$390-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                                <img src="fotos/tacc.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu2plato5.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">CARNE TIERNIZADA C/ PURE DE ZANAHORIA Y BATATA</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$360-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                                <img src="fotos/tacc.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="claseCarne" class="sectionM__article__div row">
+                <!-- AGREGAR JS -->
             </div>
         </article>
-        <!-- SECTOR CERDO -->
+    <!-- SECTOR CERDO -->   
         <article  id="menuTres" class="sectionM__article">
             <div class="sectionM__article__title">
                 <h2 class="sectionM__article__title__h2"> MENU CERDO</h2>
             </div>
-            <div class="sectionM__article__div">
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu3plato1.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">BONDIOLA DESM C/MIEL, CERVEZA Y PAPAS</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$400-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="platoBbqRibs" class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu3plato3.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">BBQ RIBS C/PURE DE BATATA</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$450-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                                <img src="fotos/tacc.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="platoRibJack" class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu3plato2.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">RIBS JACK DANIELS C/ PAPAS ESPECIALES</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$490-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                                <img src="fotos/tacc.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="claseCerdo" class="sectionM__article__div">
+                <!-- AGREGAR JS -->
             </div>
         </article>
-        <!-- SECTOR POLLO  -->
+    <!-- SECTOR POLLO  -->
         <article  id="menuCuatro" class="sectionM__article">
             <div class="sectionM__article__title">
                 <h2 class="sectionM__article__title__h2"> MENU POLLO</h2>
             </div>
-            <div class="sectionM__article__div">
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu4plato1.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">BASTONES DE POLLO C/ SALSA BBQ X 6un</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$250-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu4plato2.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">POLLO AL DIJON C/ PURE DE CALABAZA</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$300-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="platoPolloAl" class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu4plato3.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">POLLO AL VERDEO C/ PAPAS RÚSTICAS</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$300-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                                <img src="fotos/tacc.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="clasePollo" class="sectionM__article__div">
+                <!-- AGREGAR JS -->
             </div>
-        </article>
-        <!-- SECTOR MENU DE ESTACION  -->
+        </article>     
+    <!-- SECTOR MENU DE ESTACION  -->
         <article  id="menuCinco" class="sectionM__article">
             <div class="sectionM__article__title">
                 <h2 class="sectionM__article__title__h2"> MENU DE ESTACION</h2>
             </div>
-            <div class="sectionM__article__div">
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu5plato1.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">GUISO DE LENTEJA CASERO</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$350-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                                <img src="fotos/tacc.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu5plato2.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">LOCRO CASERO</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$350-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu5plato3.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">TORTILLA DE PAPA XL</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$300-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu5plato4.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">RISOTO DE MARISCOS</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$400-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="claseEstacion" class="sectionM__article__div">
+                <!-- AGREGAR JS -->
             </div>
         </article>
         <!-- SECTOR MENU SALUDABLE  -->
@@ -414,69 +183,11 @@
             <div class="sectionM__article__title">
                 <h2 class="sectionM__article__title__h2"> MENU SALUDABLE</h2>
             </div>
-            <div class="sectionM__article__div">
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu6plato1.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">TARTA INTEGRAL DE VEGETALES</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$260-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu6plato2.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">TARTA INTEGRAL CAPRESSE</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$260-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu6plato3.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">WOK VEGETALES Y POLLO</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$320-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                                <img src="fotos/tacc.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sectionM__article__div__div">
-                    <div class="sectionM__article__div__div__div" style="height:60rem">
-                        <div class="sectionM__article__div__div__div__div-foto-m">
-                            <img src="fotos/menu6plato4.jpg" alt="...">
-                        </div>
-                        <div class="sectionM__article__div__div__div__div-texto-m">
-                            <h2 class="sectionM__article__div__div__div__div-texto-m__h2">PECHUGA AL VACIO C/ ARROZ YAMANI Y VEGETALES</h2>
-                            <p class="sectionM__article__div__div__div__div-texto-m__p">-$350-</p>
-                            <div class="sectionM__article__div__div__div__div-texto-m__div">
-                                <a href="#">QUIERO!!!!</a>
-                                <img src="fotos/tacc.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="claseSaludable" class="sectionM__article__div">
+                <!-- AGREGAR JS -->
             </div>
         </article>
     </section>
-    <!-- SECTOR PIE DE PAGINA  -->
     <footer class="footer">
         <section class=" footer__section">
             <article class="footer__section__article">
@@ -528,8 +239,13 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/199cb6dc3b.js" crossorigin="anonymous"></script>
-    </body>
+</body>
 </html>
 
-
-
+<li>
+    <img src="" alt="">
+    <h3>titulo</h3>
+    <h4>precio</h4>
+    <h4>cantidad</h4>
+    <button></button>
+</li>
