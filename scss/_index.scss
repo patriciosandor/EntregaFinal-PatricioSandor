@@ -95,11 +95,10 @@
 }
 
 .sectionM{
-  position: relative;
   &__sidebar{
     background-color: rgba(42, 42, 42, 0.671);
-    position: absolute;
-    // position: fixed;
+    position: fixed;
+    overflow: scroll;
     z-index: 2;
     width: 60rem;
     height: 100vh ;
@@ -130,17 +129,45 @@
       padding: 1rem 0;
     }
 
+    &__p{
+      color: white;
+      font-size: 2rem;
+    }
     &__div{
-      &__div{
+        &__div{
+          width:100%;
         & img{
-          width:15rem;
+          width:12rem;
+        }
+        &__texto{
+          height: 100%;
+          &__titulo{
+            color:white;
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 1.8rem;
+      
+          }
+        }
+        &__precio{
+          & #monto{
+            color: white !important;
+            margin-top: 1rem;
+            font-size: 1.8rem;
+          }
+        }
+        #inputSlide{
+          width: 4rem;
+          height: 4rem;
+          font-size: 1.6rem;
         }
       }
     }
   }
 }
 
-.close{
+.cerrar{
   transform: translateX(-60rem);
   opacity: 1 !important;
+  display: inline-block;
 }

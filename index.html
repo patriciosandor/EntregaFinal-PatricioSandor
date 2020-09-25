@@ -10,13 +10,14 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <script defer src="js/objeto.js"></script>
         <script defer src="js/archivo2.js"></script>
 </head>
 <body>       
     <!-- Secto NAV -->
     <header class="header">    
         <nav class="header__nav">
-            <div class="header__nav__div">
+            <div class="header__nav__div"
                 <a class="header__nav__div__a" href="index.html">
                     <img class="header__nav__div__a__img" src="fotos/logo.png" alt="foto logo">
                 </a> 
@@ -65,7 +66,7 @@
                 </div>
                 <div class="header__nav__redes">
             <!-- ICONO USUARIO -->
-                    <i class="fas fa-user fa-3x"onclick="buscarCuenta()" data-toggle="modal" data-target="#staticBackdrop" href="#"></i>
+                    <i class="fas fa-user fa-3x" data-toggle="modal" data-target="#staticBackdrop" href="#"></i>
                     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
@@ -116,20 +117,21 @@
         </nav>
     </header>
     <section class="sectionM container-fluid">
-        <div class="sectionM__sidebar " onscroll="">
+        <div class="sectionM__sidebar " >
             <h2 class="sectionM__sidebar__h2">CARRITO DE COMPRAS</h2>
             <h4 class="sectionM__sidebar__h4">SELEECION DE COMIDA</h4>
-            <div class="sectionM__sidebar__div row modal-dialog modal-dialog-scrollable">
-                <!-- <div class="sectionM__sidebar__div__div col-6">
-                    <div class="sectionM__sidebar__div__div__div d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-                        <img src="fotos/tacc.jpg class="sectionM__sidebar__div__div__div__img">
-                        <h4 class="sectionM__sidebar__div__div__div__h6 shoppingCartItemTitle text-truncate ml-3 mb-0">pdrito</h4>
+            <p class="sectionM__sidebar__p">Total: $<span id="total">0</span></p>
+            <div id="aqui" class="sectionM__sidebar__div row ">
+              
+                <!-- <div class="sectionM__sidebar__div__div d-flex align-items-center d-flex  justify-content-around h-100 border-bottom pb-2 pt-3 row">
+                    <img src="${element.img}" class="img-fluid col-3">
+                    <div class="sectionM__sidebar__div__div__texto col-6">
+                        <h4 class="sectionM__sidebar__div__div__texto__titulo text-truncate text-center">${element.nombre}</h4>
                     </div>
-                </div>
-                <div class="sectionM__sidebar__div__div2 col-6">
-                    <div class="sectionM__sidebar__div__div2__div d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-                        <p class="sectionM__sidebar__div__div2__div__p mb-0 "></p>
+                    <div class="sectionM__sidebar__div__div__precio col-2">
+                        <h4 id="monto" class="align-self-sm-center"> <span>-$</span>${(element.precio)} <span>-</span></h4>
                     </div>
+                    <input id="inputSide" class="col-1" type="text" value="1">
                 </div> -->
             </div>
         </div>
@@ -235,6 +237,7 @@
         </section>  
     </footer>
     <!-- JS PLUGGIN -->
+ 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -242,10 +245,4 @@
 </body>
 </html>
 
-<li>
-    <img src="" alt="">
-    <h3>titulo</h3>
-    <h4>precio</h4>
-    <h4>cantidad</h4>
-    <button></button>
-</li>
+

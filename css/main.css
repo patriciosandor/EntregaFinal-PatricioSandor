@@ -13830,13 +13830,10 @@ html {
   width: 12%;
 }
 
-.sectionM {
-  position: relative;
-}
-
 .sectionM__sidebar {
   background-color: rgba(42, 42, 42, 0.671);
-  position: absolute;
+  position: fixed;
+  overflow: scroll;
   z-index: 2;
   width: 60rem;
   height: 100vh;
@@ -13868,148 +13865,46 @@ html {
   padding: 1rem 0;
 }
 
-.sectionM__sidebar__div__div img {
-  width: 15rem;
-}
-
-.close {
-  transform: translateX(-60rem);
-  opacity: 1 !important;
-}
-
-.sectionM {
-  width: auto;
-  height: 100%;
-  /* background-color: red; */
-}
-
-.sectionM__article2 {
-  height: 100%;
-  background-color: #f1f1f1;
-  padding-top: 18rem;
-  border: none;
-}
-
-.sectionM__article2__title {
-  width: 100%;
-  border-bottom: solid black 0.3rem;
-  /* background-color: tomato; */
-}
-
-.sectionM__article {
-  height: 100%;
-  background-color: #f1f1f1;
-  padding-top: 5rem;
-  padding-bottom: 3rem;
-  border: none;
-}
-
-.sectionM__article__title {
-  width: 100%;
-  border-bottom: solid black 0.3rem;
-  /* background-color: tomato; */
-}
-
-.sectionM__article__div__div {
-  margin-bottom: 3rem;
-}
-
-.sectionM__article__div__div__div {
-  border-radius: 3rem;
-  box-shadow: 0.6rem 0.6rem 3rem 0.4rem #a5a5a5;
-}
-
-.sectionM__article__div__div__div__div-foto-m {
-  overflow: hidden;
-  border-radius: 2.5rem 2.5rem 0rem 0rem;
-}
-
-.sectionM__article__div__div__div__div-foto-m img {
-  border-radius: 2.5rem 2.5rem 0rem 0rem;
-  transition: all 1.4s ease;
-}
-
-.sectionM__article__div__div__div__div-foto-m:hover img {
-  transform: scale(1.4);
-}
-
-.sectionM__article__div__div__div__div-texto-m {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.sectionM__article__div__div__div__div-texto-m__h2 {
-  width: 100%;
-}
-
-.sectionM__article__div__div__div__div-texto-m__p {
-  width: 100%;
-}
-
-.sectionM__article__div__div__div__div-texto-m .sectionM__article__div__div__div__div-texto-m__div {
-  width: 100%;
-}
-
-.sectionM__article__div__div__div__div-texto-m .sectionM__article__div__div__div__div-texto-m__div a {
-  font-size: 1.5rem;
-  border-radius: 1rem;
-  padding: 1.8rem;
-  text-align: center;
-}
-
-.sectionM__article__div__div__div__div-texto-m .sectionM__article__div__div__div__div-texto-m__div img {
-  right: 2rem;
-  bottom: 1rem;
-  width: 12%;
-}
-
-.sectionM {
-  position: relative;
-}
-
-.sectionM__sidebar {
-  background-color: rgba(42, 42, 42, 0.671);
-  position: absolute;
-  z-index: 2;
-  width: 60rem;
-  height: 100vh;
-  right: -60rem;
-  top: 10.5rem;
-  transition: all 0.8s;
-}
-
-.sectionM__sidebar__h2 {
-  display: block;
-  text-align: center;
-  margin-top: 2rem;
-  padding: 1rem;
+.sectionM__sidebar__p {
   color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 200;
-  font-size: 4.5rem;
-  border-bottom: 0.3rem solid;
-}
-
-.sectionM__sidebar__h4 {
-  color: white;
-  display: block;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
   font-size: 2rem;
-  margin: 2rem 0 1rem 0;
-  padding: 1rem 0;
+}
+
+.sectionM__sidebar__div__div {
+  width: 100%;
 }
 
 .sectionM__sidebar__div__div img {
-  width: 15rem;
+  width: 12rem;
 }
 
-.close {
+.sectionM__sidebar__div__div__texto {
+  height: 100%;
+}
+
+.sectionM__sidebar__div__div__texto__titulo {
+  color: white;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}
+
+.sectionM__sidebar__div__div__precio #monto {
+  color: white !important;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
+.sectionM__sidebar__div__div #inputSlide {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.6rem;
+}
+
+.cerrar {
   transform: translateX(-60rem);
   opacity: 1 !important;
+  display: inline-block;
 }
 
 @media (max-width: 992px) {
