@@ -13865,9 +13865,26 @@ html {
   padding: 1rem 0;
 }
 
-.sectionM__sidebar__p {
+.sectionM__sidebar__div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sectionM__sidebar__div__p {
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-left: 3rem;
+  text-align: center;
+}
+
+.sectionM__sidebar__div #cerrarSide {
+  width: 35%;
+  height: 5rem;
+  border-radius: 0.8rem;
+  margin-right: 3rem;
+  font-size: 1.6rem;
 }
 
 .sectionM__sidebar__div__div {
@@ -13880,25 +13897,40 @@ html {
 
 .sectionM__sidebar__div__div__texto {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .sectionM__sidebar__div__div__texto__titulo {
   color: white;
   text-align: center;
-  margin-top: 3rem;
   font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.sectionM__sidebar__div__div__precio {
+  margin: 0;
+  padding: 0;
 }
 
 .sectionM__sidebar__div__div__precio #monto {
   color: white !important;
-  margin-top: 1rem;
   font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
 }
 
-.sectionM__sidebar__div__div #inputSlide {
-  width: 4rem;
-  height: 4rem;
-  font-size: 1.6rem;
+.sectionM__sidebar__div__div__total {
+  color: white !important;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.sectionM__sidebar__div__div .botoneta {
+  height: 3.5rem;
+  font-size: 1.8rem;
 }
 
 .cerrar {

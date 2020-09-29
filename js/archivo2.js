@@ -1,9 +1,13 @@
+
 //---------------------------------------
         // SECTOR MENUS DE PLATOS
 //---------------------------------------
 
 // RENDERIZDOR DE PORDUCTOS
 //---------------------------------------
+const carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
+
+
 let $clasePizzaPastas = document.querySelector('#clasePizzaPastas')
 let $claseCarne = document.querySelector('#claseCarne')
 let $claseCerdo = document.querySelector('#claseCerdo')
@@ -21,7 +25,7 @@ function renderBaseDeDatos(){
         
         var miNodo = document.createElement('div')
         miNodo.classList.add('sectionM__article__div__div')
-        miNodo.innerHTML = `
+        miNodo.innerHTML += `
         <div class="sectionM__article__div__div__div" style="height:60rem">
             <div class="sectionM__article__div__div__div__div-foto-m">
                 <img src="${producto.img}" alt="...">
@@ -54,72 +58,118 @@ function renderBaseDeDatos(){
             }
             else{
                 $claseSaludabe.appendChild(miNodo)
-            }
-            
+            } 
     }) 
 
 }
 
 // RENDERIZDOR DE CARRITO
-//---------------------------------------
-let carrito = []
+// ---------------------------------------
+// let carrito = [] 
 let total = 0
 let $contenedro = document.querySelector('#aqui')
-
 
 
 var carritoCompras = $('#carritoMercado').on('click', function(){
     $('.sectionM__sidebar').toggleClass("cerrar")
 })
 
+var carritoCompras2 = $('#cerrarSide').on('click', function(){
+    $('.sectionM__sidebar').toggleClass("cerrar")
+})
+
+
+
 function sumarCarrito(index) {
-carrito.push(baseDatos[index])
-renderCarrito();
-sumadordePrecios()
- $('.sectionM__sidebar').addClass("cerrar")
+    $('.sectionM__sidebar').addClass("cerrar")
+    var producto = baseDatos[index]
+    if (carrito.length > 0) {
+        var noExiste = true;
+        for (var i = 0; i < carrito.length; i++) {
+            if (producto.nombre === carrito[i].nombre) {
+            carrito[i].cantidad++;
+            noExiste = false;
+            }
+        }
+        if (noExiste) {
+            producto.cantidad = 1;
+            carrito.push(producto);
+        }
+    } 
+    else {
+        producto.cantidad = 1;
+        carrito.push(producto);
+    }
+    renderCarrito()
+    sumadordePrecios()
 }
 
 
-
 function renderCarrito(){
+    localStorage.carrito = JSON.stringify(carrito)
     $contenedro.innerHTML = "";
-    carrito.forEach(element => {
-        $contenedro.innerHTML +=`
-        <div class="sectionM__sidebar__div__div d-flex align-items-center d-flex  justify-content-around h-100 border-bottom pb-2 pt-3 row">
-            <img src="${element.img}" class="img-fluid col-3">
-            <div class="sectionM__sidebar__div__div__texto col-5">
-                <h4 class="sectionM__sidebar__div__div__texto__titulo text-truncate text-center">${element.nombre}</h4>
+    if(carrito.length>0){
+        carrito.forEach(element => {
+            $contenedro.innerHTML +=`
+            <div class="sectionM__sidebar__div__div d-flex align-items-center d-flex  justify-content-around h-100 border-bottom pb-2 pt-3 row">
+                <img href="hola" src="${element.img}" class="img-fluid col-3">
+                <div class="sectionM__sidebar__div__div__texto col-5">
+                    <h4 class="sectionM__sidebar__div__div__texto__titulo text-truncate text-center">${element.nombre}</h4>
+                </div>
+                <div class="sectionM__sidebar__div__div__precio col-2">
+                    <h4 id="monto" class="align-self-sm-center"> <span>-$</span>${(element.precio) * (element.cantidad)} <span>-</span></h4>
+                </div>
+                <p class="sectionM__sidebar__div__div__total col-1" name="${carrito.indexOf(element)}>Total: $<span id="totalCode">${element.cantidad}</span></p>
+                <button class=" col-1 btn btn-danger botoneta" onclick="borradorProductos(${carrito.indexOf(element)})" id="${(element.codigo)}">X</button>
             </div>
-            <div class="sectionM__sidebar__div__div__precio col-2">
-                <h4 id="monto" class="align-self-sm-center"> <span>-$</span>${(element.precio)} <span>-</span></h4>
-            </div>
-            <input  class="col-1" type="text" value="1">
-            <button class=" col-1 btn btn-danger buttonBor" type="button"codigo="${(element.codigo)}">X</button>
-        </div>
-        `
-        let borrador = document.querySelector('.buttonBor')
-        borrador.addEventListener('click', borradorProductos)
-        function borradorProductos(e){
-            // let a = parseFloat(e.target.getAttribute('codigo'))
-            var borradorCart = carrito.find(producto=>producto.codigo == parseFloat(e.target.getAttribute('codigo')))
-            console.log("borradorProductos -> borradorCart", borradorCart)
-            if (borradorCart){
-            let cartBorrar = document.querySelector('.sectionM__sidebar__div__div')
-            cartBorrar.remove()
-            }
-        }
-    });
+            `
+        });
+    
+    }
+}
 
+function inputChange(e) {
+    console.log(e)
+    if (e.target.value == 0) {
+        carrito.splice(e.target.name, 1);
+    } else {
+        carrito[e.target.name].cantidad = e.target.value;
+    }
+    localStorage.carrito = JSON.stringify(carrito)
+    renderCarrito();
+}
+
+
+function borradorProductos(index){
+    console.log(index)
+    carrito[index].cantidad = carrito[index].cantidad - 1;
+    if (carrito[index].cantidad <= 0) {
+        carrito.splice(index, 1);
+    }
+    localStorage.carrito = JSON.stringify(carrito)
+    renderCarrito()
+    restadorDePrecio()
 }
 
 function sumadordePrecios(){
     let total = 0
     let precioTotal = document.querySelector('#total') 
     carrito.forEach(comidita => {
-        total = total + comidita.precio * comidita.cantidad
-        precioTotal.innerHTML = total   
+         total = total + comidita.precio * comidita.cantidad
+        precioTotal.innerHTML = total
+        return 
     });
-    console.log(total)
+    localStorage.carrito = JSON.stringify(carrito)
     }
+
+    function restadorDePrecio(){
+        carrito.forEach(noQuiero =>{
+            total + sumadordePrecios() - noQuiero.precio
+        })  
+        localStorage.carrito = JSON.stringify(carrito) 
+    }
+
+    //     // ACA CREO QUE TRAE UN ERROR DE ARRIBA POR QUE LA RESTA ME TIRA CUALQUIER COSA
+    //     // ME ESTARIA FALTANDO REMPLAZAR EL INPUT COMO HIZO NACHO
 
 

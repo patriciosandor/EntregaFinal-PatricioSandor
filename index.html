@@ -66,7 +66,7 @@
                 </div>
                 <div class="header__nav__redes">
             <!-- ICONO USUARIO -->
-                    <i class="fas fa-user fa-3x" data-toggle="modal" data-target="#staticBackdrop" href="#"></i>
+                    <i class="fas fa-user fa-3x"onclick="buscarCuenta()" data-toggle="modal" data-target="#staticBackdrop" href="#"></i>
                     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
@@ -120,19 +120,12 @@
         <div class="sectionM__sidebar " >
             <h2 class="sectionM__sidebar__h2">CARRITO DE COMPRAS</h2>
             <h4 class="sectionM__sidebar__h4">SELEECION DE COMIDA</h4>
-            <p class="sectionM__sidebar__p">Total: $<span id="total">0</span></p>
+            <div class="sectionM__sidebar__div">
+                <p  class="sectionM__sidebar__div__p">Total: $<span id="total">0</span></p>
+                <button id="cerrarSide" type="button" class="btn btn-dark">CERRAR</button>
+            </div>
             <div id="aqui" class="sectionM__sidebar__div row ">
-              
-                <!-- <div class="sectionM__sidebar__div__div d-flex align-items-center d-flex  justify-content-around h-100 border-bottom pb-2 pt-3 row">
-                    <img src="${element.img}" class="img-fluid col-3">
-                    <div class="sectionM__sidebar__div__div__texto col-6">
-                        <h4 class="sectionM__sidebar__div__div__texto__titulo text-truncate text-center">${element.nombre}</h4>
-                    </div>
-                    <div class="sectionM__sidebar__div__div__precio col-2">
-                        <h4 id="monto" class="align-self-sm-center"> <span>-$</span>${(element.precio)} <span>-</span></h4>
-                    </div>
-                    <input id="inputSide" class="col-1" type="text" value="1">
-                </div> -->
+                <!-- AGREGAR JS -->
             </div>
         </div>
     <!-- SECTOR PIZZAS Y PASTAS  -->

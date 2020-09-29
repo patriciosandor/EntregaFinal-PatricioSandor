@@ -129,41 +129,66 @@
       padding: 1rem 0;
     }
 
-    &__p{
-      color: white;
-      font-size: 2rem;
+    &__div{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        &__p{
+          color: white;
+          font-size: 2.5rem;
+          margin-left: 3rem;
+          text-align: center;
+      }
+      & #cerrarSide{
+        width: 35%;
+        height:5rem;
+        border-radius: 0.8rem;
+        margin-right: 3rem;
+        font-size: 1.6rem;
+      }
     }
     &__div{
         &__div{
-          width:100%;
-        & img{
-          width:12rem;
-        }
-        &__texto{
-          height: 100%;
-          &__titulo{
-            color:white;
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 1.8rem;
-      
+            width:100%;
+          & img{
+            width:12rem;
           }
-        }
-        &__precio{
-          & #monto{
+          &__texto{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            &__titulo{
+              color:white;
+              text-align: center;
+              font-size: 1.8rem;
+              margin: 0;
+              padding: 0;
+            }
+          }
+          &__precio{
+            margin: 0;
+            padding: 0;
+            & #monto{
+              color: white !important;
+              font-size: 1.8rem;
+              margin: 0;
+              padding: 0;
+            }
+          }
+          &__total{
             color: white !important;
-            margin-top: 1rem;
             font-size: 1.8rem;
+            margin: 0;
+            padding: 0;
           }
-        }
-        #inputSlide{
-          width: 4rem;
-          height: 4rem;
-          font-size: 1.6rem;
+          .botoneta{
+            height: 3.5rem;
+            font-size:1.8rem;
+          }
         }
       }
     }
-  }
 }
 
 .cerrar{
