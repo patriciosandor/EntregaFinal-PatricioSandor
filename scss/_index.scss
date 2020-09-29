@@ -100,9 +100,9 @@
     position: fixed;
     overflow: scroll;
     z-index: 2;
-    width: 60rem;
-    height: 100vh ;
-    right: -60rem;
+    width: 65rem;
+    height: 91vh;
+    right: -65rem;
     top: 10.5rem;
     transition: all 0.8s;
 
@@ -129,24 +129,29 @@
       padding: 1rem 0;
     }
 
-    &__div{
+    &__boton{
         display:flex;
         flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 1rem;
+        justify-content: space-around;
         &__p{
           color: white;
           font-size: 2.5rem;
-          margin-left: 3rem;
           text-align: center;
+          display: block;
       }
       & #cerrarSide{
-        width: 35%;
+        width: 20%;
         height:5rem;
         border-radius: 0.8rem;
-        margin-right: 3rem;
         font-size: 1.6rem;
       }
+      & #vaciarSide{
+        width: 20%;
+        height:5rem;
+        border-radius: 0.8rem;
+        font-size: 1.6rem;
+      }
+
     }
     &__div{
         &__div{
@@ -192,7 +197,7 @@
 }
 
 .cerrar{
-  transform: translateX(-60rem);
+  transform: translateX(-65rem);
   opacity: 1 !important;
   display: inline-block;
 }
