@@ -5,7 +5,7 @@
 
 // RENDERIZDOR DE PORDUCTOS
 //---------------------------------------
-const carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
+var carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
 
 
 let $clasePizzaPastas = document.querySelector('#clasePizzaPastas')
@@ -169,7 +169,11 @@ function sumadordePrecios(){
         localStorage.carrito = JSON.stringify(carrito) 
     }
 
-    //     // ACA CREO QUE TRAE UN ERROR DE ARRIBA POR QUE LA RESTA ME TIRA CUALQUIER COSA
-    //     // ME ESTARIA FALTANDO REMPLAZAR EL INPUT COMO HIZO NACHO
+var vaciadorProductos = document.querySelector('#vaciarSide')
+vaciadorProductos.addEventListener('click', vaciadorDeSide)
+function vaciadorDeSide(){
+    carrito = []
+    renderCarrito()
+}
 
 

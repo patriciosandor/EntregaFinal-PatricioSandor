@@ -139,7 +139,7 @@
           text-align: center;
           display: block;
       }
-      & #cerrarSide{
+      & #comprarSide{
         width: 20%;
         height:5rem;
         border-radius: 0.8rem;
@@ -147,6 +147,12 @@
       }
       & #vaciarSide{
         width: 20%;
+        height:5rem;
+        border-radius: 0.8rem;
+        font-size: 1.6rem;
+      }
+      & #cerrarSide{
+        width: 10%;
         height:5rem;
         border-radius: 0.8rem;
         font-size: 1.6rem;
