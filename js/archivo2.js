@@ -15,7 +15,7 @@ let $clasePollo = document.querySelector('#clasePollo')
 let $claseEstacion = document.querySelector('#claseEstacion')
 let $claseSaludabe = document.querySelector('#claseSaludable')
 
-renderBaseDeDatos()
+
 function renderBaseDeDatos(){
     baseDatos.forEach(function(producto){
         
@@ -163,9 +163,9 @@ function sumadordePrecios(){
     }
 
     function restadorDePrecio(){
-        carrito.forEach(noQuiero =>{
+        // carrito.forEach(noQuiero =>{
             total + sumadordePrecios() - noQuiero.precio
-        })  
+        // })  
         localStorage.carrito = JSON.stringify(carrito) 
     }
 
@@ -173,7 +173,9 @@ var vaciadorProductos = document.querySelector('#vaciarSide')
 vaciadorProductos.addEventListener('click', vaciadorDeSide)
 function vaciadorDeSide(){
     carrito = []
+    total = 0
+    console.log("vaciadorDeSide -> total", total)
     renderCarrito()
 }
-
-
+renderBaseDeDatos()
+renderCarrito()
