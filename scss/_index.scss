@@ -131,7 +131,7 @@
 
     &__boton{
         display:flex;
-        flex-direction: row;
+        flex-flow: row nowrap;
         justify-content: space-around;
         &__p{
           color: white;
@@ -160,43 +160,46 @@
 
     }
     &__div{
+      width: 100%;
+      margin: 0 !important;
         &__div{
-            width:100%;
-          & img{
-            width:12rem;
-          }
-          &__texto{
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            &__titulo{
-              color:white;
-              text-align: center;
-              font-size: 1.8rem;
+              width:98%;
+              margin: 0 !important;
+            & img{
+              width:12rem;
+            }
+            &__texto{
+              height: 100%;
               margin: 0;
               padding: 0;
+              &__titulo{
+                color:white;
+                text-align: center;
+                font-size: 1.8rem;
+                margin: 0;
+                padding: 0;
+              }
             }
-          }
-          &__precio{
-            margin: 0;
-            padding: 0;
-            & #monto{
+            &__precio{
+              margin: 0;
+              padding: 0;
+              & #monto{
+                color: white !important;
+                font-size: 1.8rem;
+                margin: 0;
+                padding: 0;
+              }
+            }
+            &__total{
               color: white !important;
               font-size: 1.8rem;
               margin: 0;
               padding: 0;
             }
-          }
-          &__total{
-            color: white !important;
-            font-size: 1.8rem;
-            margin: 0;
-            padding: 0;
-          }
-          .botoneta{
-            height: 3.5rem;
-            font-size:1.8rem;
-          }
+            .botoneta{
+              height: 3.5rem;
+              font-size:1.8rem;
+            }
         }
       }
     }

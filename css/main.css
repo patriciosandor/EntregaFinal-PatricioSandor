@@ -13867,7 +13867,7 @@ html {
 
 .sectionM__sidebar__boton {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: space-around;
 }
 
@@ -13899,8 +13899,14 @@ html {
   font-size: 1.6rem;
 }
 
-.sectionM__sidebar__div__div {
+.sectionM__sidebar__div {
   width: 100%;
+  margin: 0 !important;
+}
+
+.sectionM__sidebar__div__div {
+  width: 98%;
+  margin: 0 !important;
 }
 
 .sectionM__sidebar__div__div img {

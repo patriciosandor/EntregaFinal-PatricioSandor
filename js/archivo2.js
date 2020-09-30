@@ -82,6 +82,7 @@ var carritoCompras2 = $('#cerrarSide').on('click', function(){
 
 function sumarCarrito(index) {
     $('.sectionM__sidebar').addClass("cerrar")
+    
     var producto = baseDatos[index]
     if (carrito.length > 0) {
         var noExiste = true;
@@ -102,6 +103,7 @@ function sumarCarrito(index) {
     }
     renderCarrito()
     sumadordePrecios()
+    localStorage.carrito = JSON.stringify(carrito)
 }
 
 
