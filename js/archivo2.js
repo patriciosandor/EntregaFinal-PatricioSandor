@@ -156,10 +156,10 @@ function sumadordePrecios(){
     let precioTotal = document.querySelector('#total') 
     carrito.forEach(comidita => {
          total = total + comidita.precio * comidita.cantidad
+            return 
+        });
+        localStorage.carrito = JSON.stringify(carrito)
         precioTotal.innerHTML = total
-        return 
-    });
-    localStorage.carrito = JSON.stringify(carrito)
     }
 
     function restadorDePrecio(){
