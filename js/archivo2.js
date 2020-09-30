@@ -172,9 +172,11 @@ function sumadordePrecios(){
 var vaciadorProductos = document.querySelector('#vaciarSide')
 vaciadorProductos.addEventListener('click', vaciadorDeSide)
 function vaciadorDeSide(){
+    let precioTotal = document.querySelector('#total')
     carrito = []
     total = 0
     console.log("vaciadorDeSide -> total", total)
+    precioTotal.innerHTML = total
     renderCarrito()
 }
 renderBaseDeDatos()
