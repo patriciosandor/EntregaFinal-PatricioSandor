@@ -160,6 +160,8 @@
 
     }
     &__div{
+      display: flex;
+      justify-content: center;
       width: 100%;
       margin: 0 !important;
         &__div{

@@ -79,7 +79,6 @@ var carritoCompras2 = $('#cerrarSide').on('click', function(){
 })
 
 
-
 function sumarCarrito(index) {
     $('.sectionM__sidebar').addClass("cerrar")
     
@@ -93,13 +92,13 @@ function sumarCarrito(index) {
             }
         }
         if (noExiste) {
-            producto.cantidad = 1;
-            carrito.push(producto);
+            producto.cantidad = 1
+            carrito.push(producto)
         }
     } 
     else {
-        producto.cantidad = 1;
-        carrito.push(producto);
+        producto.cantidad = 1
+        carrito.push(producto)
     }
     renderCarrito()
     sumadordePrecios()
@@ -122,28 +121,28 @@ function renderCarrito(){
                     <h4 id="monto" class="align-self-sm-center"> <span>-$</span>${(element.precio) * (element.cantidad)} <span>-</span></h4>
                 </div>
                 <p class="sectionM__sidebar__div__div__total col-1" name="${carrito.indexOf(element)}>Total: $<span id="totalCode">${element.cantidad}</span></p>
-                <button class=" col-1 btn btn-danger botoneta" onclick="borradorProductos(${carrito.indexOf(element)})" id="${(element.codigo)}">X</button>
+                <button class=" col-1 btn btn-danger botoneta" id="${(element.codigo)}" onclick="borradorProductos(${carrito.indexOf(element)})">X</button>
             </div>
             `
-        });
-    
+        })
     }
 }
 
-function inputChange(e) {
-    console.log(e)
-    if (e.target.value == 0) {
-        carrito.splice(e.target.name, 1);
-    } else {
-        carrito[e.target.name].cantidad = e.target.value;
-    }
-    localStorage.carrito = JSON.stringify(carrito)
-    renderCarrito();
-}
+// COMO NO HAY INPUT ESTO NO SE USA
+
+// function inputChange(e) {
+//     console.log(e)
+//     if (e.target.value == 0) {
+//         carrito.splice(e.target.name, 1);
+//     } else {
+//         carrito[e.target.name].cantidad = e.target.value;
+//     }
+//     localStorage.carrito = JSON.stringify(carrito)
+//     renderCarrito();
+// }
 
 
 function borradorProductos(index){
-    console.log(index)
     carrito[index].cantidad = carrito[index].cantidad - 1;
     if (carrito[index].cantidad <= 0) {
         carrito.splice(index, 1);
@@ -165,9 +164,9 @@ function sumadordePrecios(){
     }
 
     function restadorDePrecio(){
-        // carrito.forEach(noQuiero =>{
+        carrito.forEach(noQuiero =>{
             total + sumadordePrecios() - noQuiero.precio
-        // })  
+        })  
         localStorage.carrito = JSON.stringify(carrito) 
     }
 
@@ -177,9 +176,10 @@ function vaciadorDeSide(){
     let precioTotal = document.querySelector('#total')
     carrito = []
     total = 0
-    console.log("vaciadorDeSide -> total", total)
     precioTotal.innerHTML = total
     renderCarrito()
 }
+
 renderBaseDeDatos()
 renderCarrito()
+sumadordePrecios()
