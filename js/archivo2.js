@@ -18,11 +18,7 @@ let $claseSaludabe = document.querySelector('#claseSaludable')
 
 function renderBaseDeDatos(){
     baseDatos.forEach(function(producto){
-        
-        //-----------------------------
-        // EJEMPLO SIN VISTO CON MAURO
-        //----------------------------
-        
+
         var miNodo = document.createElement('div')
         miNodo.classList.add('sectionM__article__div__div')
         miNodo.innerHTML += `
