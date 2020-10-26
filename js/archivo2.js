@@ -122,21 +122,7 @@ function renderCarrito(){
             `
         })
     }
-    cantidadTotal()
 }
-
-// COMO NO HAY INPUT ESTO NO SE USA
-
-// function inputChange(e) {
-//     console.log(e)
-//     if (e.target.value == 0) {
-//         carrito.splice(e.target.name, 1);
-//     } else {
-//         carrito[e.target.name].cantidad = e.target.value;
-//     }
-//     localStorage.carrito = JSON.stringify(carrito)
-//     renderCarrito();
-// }
 
 
 function borradorProductos(index){
@@ -175,20 +161,6 @@ function vaciadorDeSide(){
     total = 0
     precioTotal.innerHTML = total
     renderCarrito()
-}
-
-function cantidadTotal(){
-    if(carrito.length>0){
-        carrito.forEach(sumador=>{
-            total = 0
-            total += sumador.cantidad
-            console.log("cantidadTotal -> total", total)
-        })
-        let elementoNuevo = document.createElement('div')
-        elementoNuevo.setAttribute ('id', 'valorCantidad')
-        let elementoPadre = document.querySelector('#carritoMercado')
-        elementoPadre.appendChild(elementoNuevo)
-    }
 }
 
 renderBaseDeDatos()
